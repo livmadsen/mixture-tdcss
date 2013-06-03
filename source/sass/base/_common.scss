@@ -1,0 +1,93 @@
+@function get-contrasting-color( $color ) {
+  @return if( lightness( $color ) > 50, $text-default, $text-inverted );
+}
+
+@mixin breakpointdebug($message, $color: rgba(255,255,0, 0.8) ){
+	&::after{
+		content: $message;
+		font-weight: bold;
+		display: block;
+		height: auto;
+		width: 100%;
+		text-align: center;
+		background: #{$color};
+		position: fixed;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 9999;
+	}
+}
+
+
+body {
+	@if usemediaqueries {
+
+		@include small{
+			@if($DEBUG == true){ @include breakpointdebug("Small media query fired") };
+		}
+		@include medium{
+			@if($DEBUG == true){ @include breakpointdebug("Medium media query fired") };
+		}
+		@include large{ 
+			@if($DEBUG == true){ @include breakpointdebug("Large media query fired") };
+		}
+		@include xlarge{
+			@if($DEBUG == true){ @include breakpointdebug("xlarge media query fired") };
+		}
+
+		@include retina {
+			// @if($DEBUG == true){ @include breakpointdebug("Retina media query fired") };
+		}
+
+		@include short {
+			@if($DEBUG == true) { @include breakpointdebug("short window") };
+		}
+	}
+}
+
+
+.notification {
+	padding: 15px 0;
+	text-align: center;
+}
+
+.confirmation {
+	@extend .notification;
+	background-color: LightGreen ;
+	color: get-contrasting-color( LightGreen );
+}
+
+.disclaimer {
+	@extend .notification;
+	background-color: salmon;
+	color: get-contrasting-color( salmon );
+}
+
+.warning {
+	@extend .notification;
+	background-color: OrangeRed ;
+	color: get-contrasting-color( OrangeRed  );
+}
+
+.disclaimer-chromeframe {
+	@extend .disclaimer;
+}
+
+
+
+.disclaimer-no-js {
+	@extend .disclaimer;
+
+	.has-js & {
+		display: none;
+	}
+
+	.no-js & {
+		display: block !important;
+	}
+}
+
+.has-js .no-js-helper {
+	display: none;
+}

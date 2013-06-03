@@ -1,0 +1,63 @@
+%button {
+	@include box-sizing('border-box');
+	@include user-select('none');
+	-webkit-touch-callout: none;
+	background-clip: padding-box;
+	border: 0;
+	border-radius: 0.2em;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0;
+	padding: 0.5em 1em;
+	position: relative;
+	text-align: center;
+	text-decoration: none !important;
+	text-transform: uppercase;
+	background-color: #efefef;
+	box-shadow: 0 0 5px rgba(0,0,0,0.4);
+	font-family: $font-alternative;
+
+	&:hover {
+		background-color: darken(#efefef,5%);
+	}
+}
+
+.button {
+	@extend %button;
+}
+
+.button--strong {
+	@extend %button;
+	background-color: $focus-secondary;
+	color: get-contrasting-color( $focus-secondary );
+
+	&:hover {
+		background-color: $focus-secondary-emphasized;
+	}
+}
+
+.button--focus {
+	@extend %button;
+	background-color: $focus-primary;
+	color: get-contrasting-color( $focus-primary );
+
+	&:hover {
+		background-color: $focus-primary-emphasized;
+	}
+}
+
+.button--small {
+	@extend %button;
+	@extend .epsilon;
+	padding: .2em .5em;
+	box-shadow: 0 0 2px rgba(0,0,0,0.4);
+}
+
+.button--huge {
+	@extend %button;
+	padding: 1em 2em;
+}
+
+.call-to-action	%button {
+	margin-bottom: $gutter*2;
+}

@@ -1,0 +1,27 @@
+{% block title %}Model Example : Mixture + Compass{% endblock %}
+{% block content %}
+	<h1>{{ model.title }}</h1>
+	<p>Todays date: {{ 'now' | date: "%d %B %Y" }}.</p>
+
+	
+	<section class="teaser-list">
+		<h1>List populated from the global model</h1>
+		{% for kitten in global.kittens %}
+			<div>
+				{{ kitten.brand }} | {{ kitten.type }}
+			</div>
+		{% endfor %}
+	</section>
+
+	<section class="teaser-list">
+		<h1>Get a single object using "limit" attribute</h1>
+		{% for kitten in global.kittens limit:1 %}
+			<div>
+				{{ kitten.brand }} | {{ kitten.type }}
+			</div>
+		{% endfor %}
+	</section>
+
+
+
+{% endblock %}

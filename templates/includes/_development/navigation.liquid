@@ -1,0 +1,8 @@
+<ul class="mixture-nav">
+	<li {% if mixture.url == "index" %}class="current"{% endif %}><a href="/">Home</a></li>
+	<li {% if mixture.url == "model" %}class="current"{% endif %}><a href="/model">Model example</a></li>
+	<li {% if mixture.url == "styleguide" %}class="current"{% endif %}><a href="/styleguide">Style guide</a></li>
+	<li {% if mixture.url == "elements" %}class="current"{% endif %}><a href="/elements">Element library</a></li>
+	<li {% if mixture.url == "page" %}class="current"{% endif %}><a href="/page">Example page</a></li>
+	<li {% if mixture.url == "jasmine-tests" %}class="current"{% endif %}><a href="/jasmine-tests">Jasmine tests</a></li>
+</ul>

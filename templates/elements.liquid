@@ -1,0 +1,40 @@
+{% layout "tdcss" %}
+
+{% block content %}
+
+<!-- # Teasers -->
+<!-- & All sorts of kitten teasers -->
+
+<!-- : Small teaser on its lonesome -->
+{% for kitten in global.kittens limit:1 offset:2 %}
+	{% include "blocks/teaser--small" %}
+{% endfor %}
+
+<!-- : Small teaser in list -->
+<section class="teaser-list">
+	{% for kitten in global.kittens %}
+		{% include "blocks/teaser--small" %}
+	{% endfor %}
+</section>
+
+<!-- : large teaser on its lonesome -->
+{% for kitten in global.kittens limit:1 offset:2 %}
+	{% include "blocks/teaser--large" %}
+{% endfor %}
+
+<!-- : large teaser in list -->
+<section class="teaser-list">
+	{% for kitten in global.kittens %}
+		{% include "blocks/teaser--large" %}
+	{% endfor %}
+</section>
+
+<!-- # Text feature -->
+<!-- & For that long readin' you love to do on kittens -->
+
+<!-- : Text feature -->
+{% for kitten in global.kittens limit:1 %}
+	{% include "blocks/text-feature" %}
+{% endfor %}
+
+{% endblock %}

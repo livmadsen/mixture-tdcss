@@ -1,0 +1,30 @@
+$DEBUG: true;
+
+$small_max: 45em;
+$medium_max: 75em;
+$large_max: 100em;
+
+$medium_min: $small_max + 0.01;
+$large_min: $medium_max + 0.01;
+$xlarge_min: $large_max + 0.01;
+
+
+//COLORS
+$element-primary: #a04342;
+$element-secondary: #828278;
+
+$focus-primary: #bada55;
+$focus-secondary: #D6725E;
+$focus-primary-emphasized: darken($focus-primary,5%);
+$focus-secondary-emphasized: darken($focus-secondary,5%);
+
+$text-default: #444;
+$text-discreet: #878787;
+$text-focus: #D6725E;
+
+$text-inverted: #fefefe;
+
+// GRID
+
+$hgutter: 16px;
+$gutter: 16px;

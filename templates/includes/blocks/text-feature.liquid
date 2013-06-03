@@ -1,0 +1,35 @@
+<div class="text-feature">
+	<h1 class="head-stylised">{{ kitten.headline }}</h1>
+
+	<p class="date">{{ kitten.date }}</p>
+
+	<p class="text-feature__intro">{{ kitten.longteaser }}
+	</p>
+	<div class="call-to-action">
+		<button class="button--focus">Take your kitten home</button>
+	</div>
+
+	<p class="first">Chilling, Baxter her favorite aww his roof kitty cats keyboard. Home snuggliest roof cat cuddles, toss the mousie meet happy meet oh breeds loves cat she's medium hair other around cute reddit rescue siamese house hot her?</p>
+
+	<p>Nap rip the couch ham flying cat mom's buddy kitten bat drinks watching meowlly her boots he eyes size. Cat kitty lay down in your way dog nina saving front watched oscar she's old legs kitty, trust his yoda tabby. Pride first snuggle feed me siam catnip, muffin likes cute girlfriend cats. Meet birdwatch ragdoll kitty, up craig white cat cat front front tux? Cakeday, he grown sunbathe prrrrr.</p>
+
+	<h2>Comes keyboard trained</h2>
+
+	<p>Stretching, pillow cat sleeping in the sink friend pride passive kitten 9 finally cute cute best she outside.</p>
+
+	<p>Sandi thinks hiss Zooey reddit kitten aggressive cat, kitten 9 finally cute cute best she outside girlfriend cat water kitten dog wish grown kitty cats. Snickers buddy kitty loving prince basket cat sleep curiosity lounging derp kitties me gf's, spot love loving tiny cat. Tongue heart buddy terrified sleep on your face, eyes loves purses cat sleeping watched keyboard impressed Mr. Kitty boots buddy other his tabby discovered. Home fluffy neighbors mercedes, slept cat she bat cakeday kitten jump tux climb the curtains 9th persian kitty leo caturday claw roof love royal long hair happy.</p>
+
+	{% for statement in kitten.statements %}
+		<blockquote> {{ statement.statement }}
+			<cite>- {{ statement.source }}</cite>
+		</blockquote>
+	{% endfor %}
+
+	<div class="call-to-action">
+		<button class="button--focus button--huge">Take your kitten home today</button>
+	</div>
+
+	<p class="zeta">All prices subject to change</em>
+
+	</p>
+</div>

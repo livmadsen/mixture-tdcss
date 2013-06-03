@@ -1,0 +1,30 @@
+.page-main,
+.page-complementary  {
+	@include small {
+		margin: $gutter;
+	}
+	@include medium {
+		margin: $gutter*2;
+	}
+	@include no-mq {
+		margin: $gutter*2;
+	}
+}
+
+.page-main {
+	max-width: 45em;
+	
+	@include large {
+		@include inline-block;
+		width: 60%;
+		vertical-align: top;
+	}
+}
+
+.page-complementary {
+	@include large {
+		@include inline-block;
+		width: 25%;
+		vertical-align: top;
+	}
+}

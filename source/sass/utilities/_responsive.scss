@@ -1,0 +1,55 @@
+$usemediaqueries: true;
+
+// ===============================
+// The basic respond-to mixin
+// ===============================
+
+@mixin respond-to($media) {
+
+	// Sizes
+	@if $media == small {
+		@media only screen and (max-width: $small_max) { @content; }
+	}
+	@else if $media == medium {
+		@media only screen and (min-width: $medium_min) { @content; }
+	}
+	@if $media == small-medium {
+		@media only screen and (max-width: $medium_max) { @content; }
+	}
+	@else if $media == medium {
+		@media only screen and (min-width: $medium_min) { @content; }
+	}
+	@else if $media == medium-only {
+		@media only screen and (min-width: $medium_min) and (max-width: $medium_max) { @content; }
+	}
+	@else if $media == large {
+		@media only screen and (min-width: $large_min) { @content; }
+	}
+	@else if $media == xlarge {
+		@media only screen and (min-width: $xlarge_min) { @content; }
+	}
+
+	@else if $media == short {
+		@media only screen and (max-height: 21em) { @content; }
+	}
+
+	@else if $media == long {
+		@media only screen and (min-height: 51em) { @content; }
+	}
+
+	// Pixel density
+	@else if $media == retina {
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+		only screen and (min-device-pixel-ratio: 1.5) { @content; }
+	}
+
+	// Orientation
+	@else if $media == orientation-portrait {
+		@media only screen and (orientation: portrait) { @content; }
+	}
+	@else if $media == orientation-landscape {
+		@media only screen and (orientation: landscape) { @content; }
+	}
+}
+
+@import "facades";

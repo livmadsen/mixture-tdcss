@@ -1,0 +1,32 @@
+{
+	"defaulttitle": "Codegarden rocks",
+	"kittens": [
+		{
+			"brand": "Catrr",
+			"type": "Mancoon",
+			"date": "June 1 2013",
+			"headline": "A fluffy wonder bundle",
+			"teasertextshort": "A real wonder bundle, that will have you brimming with joy.",
+			"longteaser": "Once you get to know him, we guarantee that this little wonder bundle will have you brimming with joy. Our staff certainly is.",
+			"copy": "Chilling, Baxter her favorite aww his roof kitty cats keyboard. Home snuggliest roof cat cuddles, toss the mousie meet happy meet oh breeds loves cat she's medium hair other around cute reddit rescue siamese house hot her? Nap rip the couch ham flying cat mom's buddy kitten bat drinks watching meowlly her boots he eyes size. Cat kitty lay down in your way dog nina saving front watched oscar she's old legs kitty, trust his yoda tabby. Pride first snuggle feed me siam catnip, muffin likes cute girlfriend cats. Meet birdwatch ragdoll kitty, up craig white cat cat front front tux? Cakeday, he grown sunbathe prrrrr. Stretching, pillow cat sleeping in the sink friend pride passive.",
+			"teaserimage": "http://placekitten.com/400/150",
+			"bannerimage": "http://placekitten.com/1200/150",
+			"statements": [{
+				"statement": "\"This cat really is a bundle of joy. I play with him every day — and he types such fun things on my computer.\"",
+				"source": "Peter Pebble, Canterbury"
+			}]
+		},
+		{
+			"brand": "Kttens'R'us",
+			"type": "Cute kitten",
+			"teasertextshort": "Voted Cutest kitten by kittentesters.com 3 years straight. We can see why.",
+			"teaserimage": "http://placekitten.com/400/150"
+		},
+		{
+			"brand": "Here, Kitty",
+			"type": "Cornish Rex",
+			"teasertextshort": "This clever kitty has been specially trained to never sit on keyboards.",
+			"teaserimage": "http://placekitten.com/400/150"
+		}
+	]
+}

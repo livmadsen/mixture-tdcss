@@ -1,0 +1,11 @@
+<a href="page" class="teaser--small">
+	{% if kitten.teaserimage %}
+	<div class="teaser__image">
+		<image 
+			src="{{ kitten.teaserimage }}"
+			alt="{{ kitten.brand }} {{ kitten.type }}" />
+	</div>
+	{% endif %}
+	<span class="teaser__brand">{{ kitten.brand }}</span>
+	<span class="teaser__type">{{ kitten.type }}</span>
+</a>

@@ -1,0 +1,12 @@
+{% block content %}
+	{% for kitten in global.kittens limit:1 %}
+		{% include "blocks/text-feature" %}
+	{% endfor %}
+{% endblock %}
+
+{% block complementarycontent %}
+	<h1 class="gamma">Not quite right? Check some other cute kittens</h1>
+	{% for kitten in global.kittens limit:2 offset:1 %}
+		{% include "blocks/teaser--small" %}
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{{ global.defaulttitle }}{% endblock %}</title>
+
+	<!-- Project files -->
+	<link rel="stylesheet" href="../../public/styles/screen.css" type="text/css" media="screen">
+	<script type="text/javascript" src="../../source/scripts/webfont_config.js"></script>
+
+	<!--  TDCSS -->
+	<link rel="stylesheet"			href="../../test/libs/tdcss/src/tdcss.css" type="text/css" media="screen">
+	<script type="text/javascript"	 src="../../test/libs/tdcss/src/vendors/jquery.js"></script>
+	<script type="text/javascript"	 src="../../test/libs/tdcss/src/tdcss.js"></script>
+	<script type="text/javascript">
+		 $(function(){
+			 $("#tdcss").tdcss({diff: false});
+		 })
+	</script>
+	
+	{{ "_development/mixture.css" | asset_url | stylesheet_tag }}
+</head>
+<body>
+
+{% include "_development/navigation" %}
+
+<div id="tdcss">
+
+	{% block content %}
+	{% endblock %}
+
+</div>
+
+</body>
+</html>

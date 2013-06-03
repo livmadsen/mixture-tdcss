@@ -1,0 +1,21 @@
+﻿$usemediaqueries: false;
+
+// build up styles wanted for browsers without mq support
+// currently only used for IE elder via conditional load
+// ===============================
+// The basic respond-to mixin
+// ===============================
+
+@mixin respond-to($media) {
+  @if $media == medium {
+    @content;
+  }
+  @if $media == large {
+    @content;
+  }
+  @else if $media == no-mq {
+    @content;
+  }
+}
+
+@import "facades";

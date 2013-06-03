@@ -1,0 +1,14 @@
+.text-feature {
+
+	@include medium {
+		margin: 0 0 0 $hgutter*5;
+
+		.head-stylised {
+			margin-left: $hgutter*-5;
+		}
+	}
+}
+
+.text-feature__intro {
+	@extend .intro-paragraph;
+}

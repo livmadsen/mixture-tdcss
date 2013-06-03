@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{{ global.defaulttitle }}{% endblock %}</title>
+
+		<script type="text/javascript" src="../../source/scripts/webfont_config.js"></script>
+
+		<!--[if lt IE 9]>
+		{{ "screen-no-mq.css" | asset_url | stylesheet_tag }}
+		<![endif]-->
+		<!--[if gt IE 8]><!-->
+		{{ "screen.css" | asset_url | stylesheet_tag }}
+		<!--<![endif]-->
+
+
+		{{ "_development/mixture.css" | asset_url | stylesheet_tag }}
+	</head>
+	<body>
+		{% include "_development/navigation" %}
+		<div role="main" class="page-main">
+			{% block content %}{% endblock %}
+		</div>
+		<aside role="complementary" class="page-complementary">
+			{% block complementarycontent %}{% endblock %}
+		</aside>
+	</body>
+</html>

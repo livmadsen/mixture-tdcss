@@ -1,0 +1,107 @@
+// ===============================
+// Façades to the respond-to mixin
+// ===============================
+
+// Sizes
+@mixin small {
+  @include respond-to(small) {
+	@content;
+  }
+}
+@mixin small-medium {
+  @include respond-to(small-medium) {
+  @content;
+  }
+}
+@mixin medium {
+  @include respond-to(medium) {
+	@content;
+  }
+}
+@mixin medium-only {
+  @include respond-to(medium-only) {
+	@content;
+  }
+}
+@mixin large {
+  @include respond-to(large) {
+	@content;
+  }
+}
+@mixin xlarge {
+  @include respond-to(xlarge) {
+	@content;
+  }
+}
+
+
+
+// Pixel density
+@mixin retina {
+  @include respond-to(retina) {
+	@content;
+  }
+}
+
+// Orientation
+@mixin orientation-portrait {
+  @include respond-to(orientation-portrait) {
+	@content;
+  }
+}
+@mixin orientation-landscape {
+  @include respond-to(orientation-landscape) {
+	@content;
+  }
+}
+
+@mixin no-mq {
+  @include respond-to(no-mq) {
+  @content;
+  }
+}
+
+@mixin short {
+  @include respond-to(short) {
+  @content;
+  }
+}
+
+@mixin long {
+  @include respond-to(long) {
+  @content;
+  }
+}
+
+
+// ================================
+// Interface for Javascript access to the responsive properties
+// ================================
+
+
+/* Media Query Styles
+------------------------------------------*/
+head {font-family:"large";}
+body:after{ content:"large"; display:none;}
+
+@if usemediaqueries {
+  @include small {
+    head { font-family:"small";}
+    body:after{content:"small";}
+  }
+
+  @include medium {
+    head { font-family:"medium";}
+    body:after{content:"medium";}
+  }
+
+  @include large {
+    head { font-family:"large";}
+    body:after{content:"large";}
+  }
+
+  @include xlarge {
+    head { font-family:"xlarge";}
+    body:after{content:"xlarge";}
+  }
+}
