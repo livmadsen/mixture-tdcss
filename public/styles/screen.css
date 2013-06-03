@@ -1033,7 +1033,7 @@ p {
   font-family: "Croissant One", serif;
   font-style: normal;
   font-weight: 400;
-  color: #d6725e;
+  color: salmon;
   margin-bottom: 32px;
 }
 
@@ -1079,11 +1079,11 @@ blockquote cite {
 }
 
 .button--strong {
-  background-color: #d6725e;
+  background-color: salmon;
   color: #444444;
 }
 .button--strong:hover {
-  background-color: #d1604a;
+  background-color: #f96a59;
 }
 
 .button--focus {

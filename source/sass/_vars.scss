@@ -14,13 +14,13 @@ $element-primary: #a04342;
 $element-secondary: #828278;
 
 $focus-primary: #bada55;
-$focus-secondary: #D6725E;
+$focus-secondary: salmon;
 $focus-primary-emphasized: darken($focus-primary,5%);
 $focus-secondary-emphasized: darken($focus-secondary,5%);
 
 $text-default: #444;
 $text-discreet: #878787;
-$text-focus: #D6725E;
+$text-focus: $focus-secondary;
 
 $text-inverted: #fefefe;
 
