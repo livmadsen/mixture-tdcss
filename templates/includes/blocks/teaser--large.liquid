@@ -1,9 +1,9 @@
 <div class="teaser--large">
 	{% if kitten.teaserimage %}
-		<image class="teaser__image" src="{{ kitten.teaserimage }}" alt="{{ kitten.brand }} {{ kitten.type }}" />
+		<image class="teaser__image" src="{{ kitten.teaserimage }}" alt="{{ kitten.name }} {{ kitten.type }}" />
 	{% endif %}
-	<span class="teaser__brand">{{ kitten.brand }}</span>
+	<span class="teaser__name">{{ kitten.name }}</span>
 	<span class="teaser__type">{{ kitten.type }}</span>
-	<span class="teaser__copy">{{ kitten.teasertextshort }}</span>
+	<span class="teaser__copy">{{ kitten.teaser }}</span>
 	<a href="page" class="button--small">Check out this cat</a>
 </div>

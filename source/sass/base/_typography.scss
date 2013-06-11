@@ -44,7 +44,7 @@ p {
 
 
 
-.head-stylised {
+.heading--embellished {
 	@extend .mega;
 	font-family: $font-effect;
 	font-style: normal;
@@ -56,7 +56,7 @@ p {
 blockquote {
 	@extend .beta;
 	text-align: left;
-	text-indent: $hgutter;
+	text-indent: $gutter;
 	font-family: $font-alternative;
 	font-style: normal;
 	font-weight: 400;

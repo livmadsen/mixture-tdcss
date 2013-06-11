@@ -8,7 +8,7 @@
 		<h1>List populated from the global model</h1>
 		{% for kitten in global.kittens %}
 			<div>
-				{{ kitten.brand }} | {{ kitten.type }}
+				{{ kitten.name }} | {{ kitten.type }}
 			</div>
 		{% endfor %}
 	</section>
@@ -17,7 +17,7 @@
 		<h1>Get a single object using "limit" attribute</h1>
 		{% for kitten in global.kittens limit:1 %}
 			<div>
-				{{ kitten.brand }} | {{ kitten.type }}
+				{{ kitten.name }} | {{ kitten.type }}
 			</div>
 		{% endfor %}
 	</section>

@@ -1,12 +1,14 @@
 <div class="text-feature">
-	<h1 class="head-stylised">{{ kitten.headline }}</h1>
 
+<img src="{{ kitten.bannerimage }}" width="100%" class="text-feature__banner" />
+
+	<h1 class="heading--embellished">{{ kitten.name }} - {{ kitten.headline }}</h1>
 	<p class="date">{{ kitten.date }}</p>
 
 	<p class="text-feature__intro">{{ kitten.longteaser }}
 	</p>
 	<div class="call-to-action">
-		<button class="button--focus">Take your kitten home</button>
+		<button class="button--focus">Take {{ kitten.name }} home</button>
 	</div>
 
 	<p class="first">Chilling, Baxter her favorite aww his roof kitty cats keyboard. Home snuggliest roof cat cuddles, toss the mousie meet happy meet oh breeds loves cat she's medium hair other around cute reddit rescue siamese house hot her?</p>

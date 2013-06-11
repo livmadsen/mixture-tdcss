@@ -10,10 +10,19 @@
 	{% include "blocks/teaser--small" %}
 {% endfor %}
 
-<!-- : Small teaser in list -->
+<!-- : Small teasers -->
 <section class="teaser-list">
+	<h1>Moar kittens</h1>
 	{% for kitten in global.kittens %}
 		{% include "blocks/teaser--small" %}
+	{% endfor %}
+</section>
+
+<!-- : large teaser in list -->
+<section class="teaser-list">
+	<h1>All our kittens</h1>
+	{% for kitten in global.kittens %}
+		{% include "blocks/teaser--large" %}
 	{% endfor %}
 </section>
 
@@ -21,13 +30,6 @@
 {% for kitten in global.kittens limit:1 offset:2 %}
 	{% include "blocks/teaser--large" %}
 {% endfor %}
-
-<!-- : large teaser in list -->
-<section class="teaser-list">
-	{% for kitten in global.kittens %}
-		{% include "blocks/teaser--large" %}
-	{% endfor %}
-</section>
 
 <!-- # Text feature -->
 <!-- & For that long readin' you love to do on kittens -->

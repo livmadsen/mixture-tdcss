@@ -628,7 +628,7 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 0.35681rem;
 }
 
-.mega, .head-stylised {
+.mega, .heading--embellished {
   font-size: 85.248px;
   font-size: 4.48485rem;
   margin-bottom: 0.37571rem;
@@ -779,7 +779,7 @@ abbr:hover {
   counter-increment: definitions;
 }
 .dictionary-style dd:before {
-  content: counter(definitions, decimal) ". ";
+  content: counter(definitions,decimal) ". ";
 }
 
 /**
@@ -932,7 +932,7 @@ p {
   margin-bottom: 32px;
 }
 
-.head-stylised {
+.heading--embellished {
   font-family: "Croissant One", serif;
   font-style: normal;
   font-weight: 400;
@@ -1012,27 +1012,18 @@ blockquote cite {
 
 .teaser--small, .teaser--large {
   max-width: 80em;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   font-family: Dosis, sans-serif;
   text-decoration: none;
   color: #444444;
 }
 
-.teaser--small {
-  max-width: 10em;
-}
-
-.teaser--large .button, .teaser--large .button--strong, .teaser--large .button--focus, .teaser--large .button--small, .teaser--large .button--huge {
-  margin: 16px 0;
-}
-
-.teaser__brand {
+.teaser__name {
   text-transform: uppercase;
+  font-weight: bold;
+}
+
+.teaser__type {
+  color: #878787;
 }
 
 .teaser__copy {
@@ -1040,7 +1031,6 @@ blockquote cite {
 }
 
 .teaser__image {
-  width: 100%;
   position: relative;
 }
 .teaser__image:after {
@@ -1056,11 +1046,40 @@ blockquote cite {
   width: 100%;
 }
 
+.teaser--small {
+  display: block;
+}
+.teaser--small .teaser__image {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  width: 20%;
+  margin-right: 16px;
+}
+
+.teaser--large {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+.teaser--large .teaser__image {
+  width: 100%;
+}
+.teaser--large .button, .teaser--large .button--strong, .teaser--large .button--focus, .teaser--large .button--small, .teaser--large .button--huge {
+  margin: 16px 0;
+}
+
 .teaser-list {
   margin-top: 32px;
   margin-bottom: 64px;
 }
-.teaser-list .teaser--small, .teaser-list .teaser--large {
+.teaser-list .teaser--large {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -1080,8 +1099,12 @@ blockquote cite {
 .text-feature {
   margin: 0 0 0 80px;
 }
-.text-feature .head-stylised {
+.text-feature .heading--embellished {
   margin-left: -80px;
+}
+
+.text-feature__banner {
+  margin: 0 0 48px;
 }
 
 .page-main,

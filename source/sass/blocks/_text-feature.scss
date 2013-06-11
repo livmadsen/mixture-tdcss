@@ -1,12 +1,16 @@
 .text-feature {
 
 	@include medium {
-		margin: 0 0 0 $hgutter*5;
+		margin: 0 0 0 $gutter*5;
 
-		.head-stylised {
-			margin-left: $hgutter*-5;
+		.heading--embellished {
+			margin-left: $gutter*-5;
 		}
 	}
+}
+
+.text-feature__banner {
+	margin: 0 0 $gutter*3;
 }
 
 .text-feature__intro {

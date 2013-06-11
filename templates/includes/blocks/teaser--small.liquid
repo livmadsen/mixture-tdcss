@@ -1,11 +1,11 @@
 <a href="page" class="teaser--small">
 	{% if kitten.teaserimage %}
-	<div class="teaser__image">
-		<image 
+		<image class="teaser__image"
 			src="{{ kitten.teaserimage }}"
-			alt="{{ kitten.brand }} {{ kitten.type }}" />
-	</div>
+			alt="{{ kitten.name }} {{ kitten.type }}" />
 	{% endif %}
-	<span class="teaser__brand">{{ kitten.brand }}</span>
-	<span class="teaser__type">{{ kitten.type }}</span>
+	<span class="teaser__description">
+		<span class="teaser__name">{{ kitten.name }}</span>
+		<span class="teaser__type">{{ kitten.type }}</span>
+	</span>
 </a>

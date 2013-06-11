@@ -1,28 +1,19 @@
+// BASE BLOCK/ELEMENTS
+
 %teaser {
 	max-width: 80em;
-	@include inline-block;
 	font-family: $font-alternative;
 	text-decoration: none;
 	color: $text-default;
 }
 
-.teaser--small {
-	@extend %teaser;
-	@extend .delta;
-	max-width: 10em;
-}
-
-.teaser--large {
-	@extend %teaser;
-	@extend .delta;
-
-	%button {
-		margin: $gutter 0;
-	}
-}
-
-.teaser__brand {
+.teaser__name {
 	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.teaser__type {
+	color: $text-discreet;
 }
 
 .teaser__copy {
@@ -30,7 +21,6 @@
 }
 
 .teaser__image {
-	width: 100%;
 	position: relative;
 
 	&:after {
@@ -49,11 +39,43 @@
 }
 
 
+// MODIFIERS
+
+.teaser--small {
+	@extend %teaser;
+	@extend .delta;
+
+	display: block;
+
+	.teaser__image {
+		@include inline-block;
+		width: 20%;
+		margin-right: $gutter;
+	}
+}
+
+.teaser--large {
+	@extend %teaser;
+	@extend .delta;
+	@include inline-block;
+
+	.teaser__image {
+		width: 100%;
+	}
+
+	%button {
+		margin: $gutter 0;
+	}
+}
+
+
+// CONTAINERS
+
 .teaser-list {
 	margin-top: $gutter*2;
 	margin-bottom: $gutter*4;
 
-	%teaser {
+	.teaser--large {
 		@include inline-block;
 		vertical-align: top;
 		text-align: center;
@@ -70,6 +92,8 @@
 		@include large {
 			width: 30%;
 		}
+
+
 	}
 
 
