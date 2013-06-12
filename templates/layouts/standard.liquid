@@ -14,10 +14,10 @@
 		<!--<![endif]-->
 
 
-		{{ "_development/mixture.css" | asset_url | stylesheet_tag }}
+		{{ "_development/mixture-navigation.css" | asset_url | stylesheet_tag }}
 	</head>
 	<body>
-		{% include "_development/navigation" %}
+		{% include "_development/mixture-navigation" %}
 		<div role="main" class="page-main">
 			{% block content %}{% endblock %}
 		</div>

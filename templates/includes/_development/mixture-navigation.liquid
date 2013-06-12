@@ -1,0 +1,9 @@
+<nav class="mixture-nav">
+	<a href="/" {% if mixture.url == "index" %}class="current"{% endif %}>Home</a>
+	<a href="/model" {% if mixture.url == "model" %}class="current"{% endif %}>Model example</a>
+	<a href="/styleguide" {% if mixture.url == "styleguide" %}class="current"{% endif %}>Style guide</a>
+	<a href="/elements" {% if mixture.url == "elements" %}class="current"{% endif %}>Element library</a>
+	<a href="/page" {% if mixture.url == "page" %}class="current"{% endif %}>Example page</a>
+	<a href="/jasmine-tests" {% if mixture.url == "jasmine-tests" %}class="current"{% endif %}>Jasmine tests</a>
+	<a href="https://github.com/livmadsen/mixture-tdcss">Source on Github</a>
+</nav>

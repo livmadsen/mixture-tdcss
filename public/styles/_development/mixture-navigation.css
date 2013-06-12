@@ -1,0 +1,18 @@
+/* MIXTURE */
+.mixture-nav {
+  padding: 0;
+  list-style: none;
+  letter-spacing: -3px;
+  font-size: 0.8em;
+}
+.mixture-nav > a {
+  background-color: #2F2F2F;
+  color: #fff;
+  padding: 0.5em 1em;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: normal;
+}
+.mixture-nav > a.current {
+  background-color: #4F4F4F;
+}
